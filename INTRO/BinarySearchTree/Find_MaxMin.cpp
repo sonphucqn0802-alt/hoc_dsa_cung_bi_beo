@@ -1,3 +1,7 @@
+/*Nhận vào một dãy gồm N số nguyên, hãy hình thành cây NPTK bằng cách thêm
+các số này một cách tuyến tính và tìm giá trị min, max của cây đó. 
+*/
+
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -27,7 +31,7 @@ TNode* CreateTNode(int x) {
 }
 
 void Insert(TNode* &, int);
-int DemNutLe(TNode *);
+void InMinMax(TNode*);
 
 void Insert(TNode* &root, int x) {
      if (root == nullptr) {
@@ -42,17 +46,21 @@ void Insert(TNode* &root, int x) {
      }
 }
 
-int DemNutLe(TNode* root) {
+void InMinMax(TNode* root) {
      if (root == nullptr) {
-          return 0;
+          return;
      }
-     int dem = 0;
-     if (root->key%2==1) {
-          dem = 1;
+     TNode* current = root;
+     while (current->pLeft != nullptr) {
+          current = current->pLeft;
      }
-     return dem + DemNutLe(root->pLeft) + DemNutLe(root->pRight);
+     cout << "Min: " << current->key << endl;
+     current = root;
+     while (current->pRight != nullptr) {
+          current = current->pRight;
+     }
+     cout << "Max: " << current->key << endl;
 }
-
 
 
 
@@ -68,7 +76,7 @@ int main()
         n--;
     }
     
-    cout << "#OddNodes: " << DemNutLe(T.root);
+    InMinMax(T.root);
     
     return 0;
 }

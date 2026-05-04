@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -27,33 +28,27 @@ TNode* CreateTNode(int x) {
 }
 
 void Insert(TNode* &, int);
-int DemNutLe(TNode *);
+int GetHeight(TNode *);
 
 void Insert(TNode* &root, int x) {
-     if (root == nullptr) {
-          root = CreateTNode(x);
-          return;
-     }
-     if (x < root->key) {
-          Insert(root->pLeft, x);
-     }
-     else {
-          Insert(root->pRight, x);
-     }
+    if (root == nullptr) {
+        root = CreateTNode(x);
+        return;
+    }
+    if (x < root->key) {
+        Insert(root->pLeft, x);
+    }
+    else {
+        Insert(root->pRight, x);
+    }
 }
 
-int DemNutLe(TNode* root) {
-     if (root == nullptr) {
-          return 0;
-     }
-     int dem = 0;
-     if (root->key%2==1) {
-          dem = 1;
-     }
-     return dem + DemNutLe(root->pLeft) + DemNutLe(root->pRight);
+int GetHeight(TNode* root) {
+    if (root == nullptr) return -1;
+    else {
+        return 1 + max(GetHeight(root->pLeft), GetHeight(root->pRight));
+    }
 }
-
-
 
 
 int main()
@@ -68,7 +63,7 @@ int main()
         n--;
     }
     
-    cout << "#OddNodes: " << DemNutLe(T.root);
+    cout << "Height: " << GetHeight(T.root);
     
     return 0;
 }

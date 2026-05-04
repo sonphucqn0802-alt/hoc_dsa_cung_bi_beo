@@ -1,3 +1,11 @@
+/*Nhận vào một dãy gồm N số nguyên, hãy hình thành cây NPTK bằng cách thêm
+các số này một cách tuyến tính và viết hàm đếm tổng số lượng nút trong cây
+INPUT
+- Dòng đầu tiên là số nguyên dương N
+- Dòng thứ hai gồm N số nguyên.
+OUTPUT
+- In ra số lượng nút có 1 con trong cây 
+*/
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -27,7 +35,7 @@ TNode* CreateTNode(int x) {
 }
 
 void Insert(TNode* &, int);
-int DemNutLe(TNode *);
+int DemNut1Con(TNode *);
 
 void Insert(TNode* &root, int x) {
      if (root == nullptr) {
@@ -42,16 +50,20 @@ void Insert(TNode* &root, int x) {
      }
 }
 
-int DemNutLe(TNode* root) {
+int DemNut1Con(TNode* root) {
      if (root == nullptr) {
           return 0;
      }
      int dem = 0;
-     if (root->key%2==1) {
+     if ((root->pLeft == nullptr && root->pRight != nullptr) ||
+         (root->pLeft != nullptr && root->pRight == nullptr)) {
           dem = 1;
      }
-     return dem + DemNutLe(root->pLeft) + DemNutLe(root->pRight);
+     return dem + DemNut1Con(root->pLeft) + DemNut1Con(root->pRight);
 }
+
+
+
 
 
 
@@ -68,7 +80,7 @@ int main()
         n--;
     }
     
-    cout << "#OddNodes: " << DemNutLe(T.root);
+    cout << "#1-Child Nodes: " << DemNut1Con(T.root);
     
     return 0;
 }
