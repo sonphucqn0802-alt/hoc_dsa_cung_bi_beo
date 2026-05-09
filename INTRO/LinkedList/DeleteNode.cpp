@@ -1,16 +1,18 @@
 /*Hãy viết chương trình thực hiện các tác vụ sau theo từng bước:
 
 Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết
-TÌM tất cả vị trí xuất hiện của phần tử K trong danh sách liên kết và XÓA.
+TÌM vị trí xuất hiện đầu tiên của phần tử K trong danh sách liên kết và XÓA đi phần tử đó nếu có.
 Nếu K không tồn tại trong danh sách thì in ra -1. Ngược lại, in ra danh sách sau khi đã xóa.*/
-#include <bits/stdc++.h>
+
+
+
+#include <iostream>
 using namespace std;
 
 struct NODE {
     int info;
     NODE* pNext;
 };
-
 
 struct LIST {
     NODE* pHead;
@@ -31,20 +33,10 @@ NODE* CreateNode(int x) {
     return p;
 }
 
-void PrintList(LIST L)
-{
-    NODE *p = L.pHead;
-    while (p != NULL)
-    {
-        cout << p->info << " ";
-        p = p->pNext;
-    }
-}
-
 void InsertTail(LIST &L, NODE* p) {
     if (L.pHead == NULL) {
+        L.pHead = p;
         L.pTail = p;
-        L.pHead = L.pTail;
     }
     else {
         L.pTail->pNext = p;
@@ -52,8 +44,14 @@ void InsertTail(LIST &L, NODE* p) {
     }
 }
 
-void TimKiemVaXoa(LIST &, int);
-
+void PrintList(LIST L) {
+    NODE* p = L.pHead;
+    while (p != NULL) {
+        cout << p->info << " ";
+        p = p->pNext;
+    }
+    cout << endl;
+}
 
 NODE* TimKiem(LIST L, int x) {
     NODE* p = L.pHead;
@@ -89,43 +87,22 @@ void DeleteNode(LIST &L, NODE* p) {
 }
 
 void TimKiemVaXoa(LIST &L, int x) {
-    bool found = false;
-    NODE* current = L.pHead;
-    NODE* prev = NULL;
-    
-    while (current != NULL) {
-        if (current->info == x) {
-            found = true;
-            NODE* temp = current;
-            
-            if (prev == NULL) {
-                // Xóa node đầu danh sách
-                L.pHead = current->pNext;
-                current = L.pHead;
-            } else {
-                // Xóa node ở giữa hoặc cuối
-                prev->pNext = current->pNext;
-                current = current->pNext;
-            }
-            
-            // Cập nhật pTail nếu cần
-            if (temp == L.pTail) {
-                L.pTail = prev;
-            }
-            
-            delete temp;
-        } else {
-            prev = current;
-            current = current->pNext;
-        }
-    }
-    
-    if (!found) {
+    NODE* p = TimKiem(L, x);
+    if (p == NULL) {
         cout << -1 << endl;
-    } else {
+    }
+    else {
+        DeleteNode(L, p);
         PrintList(L);
     }
 }
+
+
+
+
+NODE* TimKiem(LIST, int);
+void DeleteNode(LIST &, NODE*);
+void TimKiemVaXoa(LIST &, int);
 
 
 int main()

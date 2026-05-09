@@ -1,0 +1,101 @@
+/*Hãy viết chương trình thực hiện các tác vụ sau theo từng bước:
+
+Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết
+ĐẢO NGƯỢC danh sách liên kết
+In ra danh sách liên kết đã đảo ngược.*/
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+struct NODE {
+    int info;
+    NODE* pNext;
+};
+
+
+struct LIST {
+    NODE* pHead;
+    NODE* pTail;
+};
+
+void CreateEmptyList(LIST &L) {
+    L.pHead = NULL;
+    L.pTail = NULL;
+}
+
+NODE* CreateNode(int x) {
+    NODE* p = new NODE;
+    if (p == NULL)
+        exit(1);
+    p->info = x;
+    p->pNext = NULL;
+    return p;
+}
+
+void InsertTail(LIST &L, NODE* p) {
+    if (L.pHead == NULL) {
+        L.pTail = p;
+        L.pHead = L.pTail;
+    }
+    else {
+        L.pTail->pNext = p;
+        L.pTail = p;
+    }
+}
+
+void PrintList(LIST L)
+{
+    NODE *p = L.pHead;
+    while (p != NULL)
+    {
+        cout << p->info << " ";
+        p = p->pNext;
+    }
+}
+
+void ReverseLL(LIST &);
+
+
+void ReverseLL(LIST &L) {
+
+    NODE* prev = NULL;
+    NODE* curr = L.pHead;
+    NODE* next = NULL;
+
+    // head cũ sẽ trở thành tail mới
+    L.pTail = L.pHead;
+
+    while (curr != NULL) {
+
+        // lưu node kế tiếp
+        next = curr->pNext;
+
+        // đảo chiều liên kết
+        curr->pNext = prev;
+
+        // di chuyển các con trỏ
+        prev = curr;
+        curr = next;
+    }
+
+    // cập nhật head mới
+    L.pHead = prev;
+}
+
+
+
+int main()
+{
+    LIST L;
+    CreateEmptyList(L);
+    int n; cin >> n;
+    int x;
+    for (int i = 0; i < n; i++){
+        cin >> x;
+        InsertTail(L, CreateNode(x));
+    }
+    ReverseLL(L);
+    PrintList(L);
+    return 0;
+}
