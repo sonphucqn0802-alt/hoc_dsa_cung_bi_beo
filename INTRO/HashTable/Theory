@@ -1,0 +1,26 @@
+BẢNG BĂM (HASH TABLE)
+            [Cấu trúc dữ liệu tối ưu Tìm kiếm/Chèn/Xóa: O(1)]
+                                  │
+         ┌────────────────────────┴────────────────────────┐
+  HÀM BĂM PHỔ BIẾN                                GIẢI QUYẾT ĐỤNG ĐỘ
+(Biến đổi Key -> Index)                      (Khi 2 Key trùng Index)
+         │                                                 │
+         ├─► Phương pháp chia                              ├─► Nối kết trực tiếp (Chaining)
+         │   h(K) = K % M                                  │   - Dùng Danh sách liên kết đơn
+         │                                                 │   - Không giới hạn số phần tử
+         ├─► Phương pháp nhân                              │
+         │   h(K) = ⌊M * (K*A % 1)⌋                        └─► Địa chỉ mở (Open Addressing)
+         │                                                     - Lưu trực tiếp trong mảng (≤ M)
+         └─► Bình phương giữa                                  - Các chiến lược dò vị trí trống:
+             Lấy các chữ số giữa của K²                            │
+                                                                   ├──► Dò tuyến tính
+                                                                   │    h(K,i) = (h'(K) + i) % M
+                                                                   │    ⚠️ Lỗi kết cụm sơ cấp
+                                                                   │
+                                                                   ├──► Dò bậc hai
+                                                                   │    h(K,i) = (h'(K) + i²) % M
+                                                                   │    ⚠️ Lỗi kết cụm thứ cấp
+                                                                   │
+                                                                   └──► Băm kép (Double Hashing)
+                                                                        h(K,i) = (h1(K) + i*h2(K)) % M
+                                                                        ✔ Tối ưu nhất
