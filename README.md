@@ -21,7 +21,7 @@ Tại đây, mình ghi lại từ những dòng code lý thuyết cơ bản, cá
 Dưới đây là các phần kiến thức mình đã và đang và sẽ cày cuốc:
 ### 1. Cấu Trúc Dữ Liệu (Data Structures)
 - [x] **Mảng & Danh sách liên kết** (Array & Linked List: Single, Double, Circular)
-- [] **Ngăn xếp & Hàng đợi** (Stack & Queue)
+- [ ] **Ngăn xếp & Hàng đợi** (Stack & Queue)
 - [x] **Bảng băm** (Hash Table)
 - [ ] **Cây & Cây tìm kiếm nhị phân** (Tree & BST, AVL, Red-Black Tree)
 - [ ] **Đồ thị** (Graph - Danh sách kề, Ma trận kề)
