@@ -40,14 +40,19 @@ Mình sắp xếp code theo từng chương để sau này dễ ôn tập lại:
 
 ```text
 hoc_dsa_cung_bi_beo/
-├── 01_Linked_Lists/       # Danh sách liên kết (Singly, Doubly)
-├── 02_Stacks_Queues/      # Ngăn xếp & Hàng đợi
-├── 03_Hash_Tables/        # Bảng băm (Linear Probing, Chaining)
-│   ├── BaiTap/
-│   │   ├── Base.cpp       # Code gốc giải bài tập
-│   │   └── Base.exe
-│   └── Theory.md          # Ghi chú lý thuyết bảng băm
-├── 04_Trees/              # Cây nhị phân, AVL
-├── 05_Graphs/             # Đồ thị & Các giải thuật duyệt đồ thị
-├── LeetCode_Solutions/    # Các bài tập luyện thêm trên LeetCode
-└── README.md              # File này nè!
+├── .qodo/                 # Thư mục cấu hình của Qodo (AI Assistant)
+├── .vscode/               # Cấu hình compiler, tasks.json và launch.json
+├── Cau_truc_du_lieu/      # Nhánh lưu trữ các Cấu trúc dữ liệu
+│   ├── 01_Linked_Lists/   # Danh sách liên kết
+│   ├── 02_Stacks_Queues/  # Ngăn xếp & Hàng đợi
+│   ├── 03_Hash_Tables/    # Bảng băm
+│   ├── 04_Trees/          # Cây nhị phân, AVL...
+│   └── 05_Graphs/         # Đồ thị
+├── Giai_thuat/            # Nhánh lưu trữ các Thuật toán
+│   ├── Search/            # Thuật toán tìm kiếm (Tuyến tính, Nhị phân...)
+│   ├── Sort/              # Thuật toán sắp xếp (Bubble, QuickSort, MergeSort...)
+│   ├── Recursion_Backtracking/ # Kỹ thuật Đệ quy & Quay lui (N-Queens, Hoán vị...)
+│   ├── Graph_Algorithms/  # Thuật toán đồ thị nâng cao (BFS, DFS, Dijkstra, Prim...)
+│   └── Dynamic_Programming/ # Quy hoạch động (Cái túi, Balo, Chuỗi con chung dài nhất...)
+├── LeetCode_Solutions/    # Nơi giải các bài tập nâng cao trên LeetCode
+└── test.cpp               # File dùng để test nhanh code nháp
