@@ -1,10 +1,3 @@
-/*Hãy viết chương trình thực hiện các tác vụ sau theo từng bước:
-
-Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết
-ĐẢO NGƯỢC danh sách liên kết
-In ra danh sách liên kết đã đảo ngược.*/
-
-
 #include <bits/stdc++.h>
 using namespace std;
 

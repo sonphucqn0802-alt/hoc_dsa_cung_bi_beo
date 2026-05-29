@@ -1,7 +1,3 @@
-/*Nhận vào một dãy gồm N số nguyên, hãy hình thành cây NPTK bằng cách thêm
-các số này một cách tuyến tính và viết hàm đếm tổng số lượng nút có giá trị chẵn
-*/
-
 #include <iostream>
 #include <vector>
 #include <stack>

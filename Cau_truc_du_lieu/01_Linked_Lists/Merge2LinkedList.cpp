@@ -1,13 +1,3 @@
-/*
-Hãy viết chương trình thực hiện các tác vụ sau theo từng bước:
-
-Tạo một danh sách liên kết đơn L1 để lưu trữ N số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết
-Tạo một danh sách liên kết đơn L2 để lưu trữ M số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết
-Nối danh sách L2 vào sau danh sách L1
-In ra 2 danh sách L1 và L2
-*/
-
-
 #include <iostream>
 using namespace std;
 

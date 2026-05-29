@@ -1,10 +1,3 @@
-/*Hãy viết chương trình thực hiện các tác vụ sau theo từng bước:
-
-Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết.
-Sắp xếp các phần tử trong danh sách theo trật tự tăng dần sử dụng Selection Sort và SWAP CON TRỎ thay vì SWAP GIÁ TRỊ 
-In ra các phần tử trong danh sách đã được sắp xếp*/
-
-
 #include <iostream>
 using namespace std;
 

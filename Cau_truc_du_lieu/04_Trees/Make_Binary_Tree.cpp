@@ -1,8 +1,3 @@
-/*
-Nhận vào một dãy gồm N số nguyên, hãy hình thành cây NPTK bằng cách thêm
-các số này một cách tuyến tính và duyệt cây theo các thứ tự NRL, LNR, LRN, RLN,
-RNL. 
-*/
 #include <iostream>
 #include <vector>
 

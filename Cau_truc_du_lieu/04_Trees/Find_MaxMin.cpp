@@ -1,7 +1,3 @@
-/*Nhận vào một dãy gồm N số nguyên, hãy hình thành cây NPTK bằng cách thêm
-các số này một cách tuyến tính và tìm giá trị min, max của cây đó. 
-*/
-
 #include <iostream>
 #include <vector>
 #include <stack>

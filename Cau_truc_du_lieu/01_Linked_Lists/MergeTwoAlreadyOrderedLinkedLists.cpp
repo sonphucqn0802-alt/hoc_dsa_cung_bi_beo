@@ -1,11 +1,3 @@
-/*
-Hãy viết chương trình thực hiện các tác vụ sau theo từng bước:
-
-Tạo một danh sách liên kết đơn L1 để lưu trữ N số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết.
-Tạo một danh sách liên kết đơn L2 để lưu trữ M số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết
-Biết rằng các phần tử ở L1 và L2 đều được sắp xếp theo trật tự tăng dần. Thực hiện tác vụ gộp các phần tử L1 và L2 vào danh sách L3 để L3 cũng có trận tự tăng dần
-In ra các phần tử trong L3
-*/
 #include <bits/stdc++.h>
 using namespace std;
 

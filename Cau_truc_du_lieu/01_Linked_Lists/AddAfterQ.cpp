@@ -1,15 +1,3 @@
-/*
-Hãy viết chương trình thực hiện các tác vụ sau theo từng bước:
-
-Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. Phần tử mới được THÊM
-vào CUỐI danh sách liên kết
-TÌM vị trí xuất hiện đầu tiên của phần tử K trong danh sách liên kết.
-THÊM phần tử mới có giá trị 1999 vào sau K. Nếu K không tồn tại trong danh 
-sách thì thêm phần tử mới 1999 đó vào cuối danh sách.
-In ra danh sách sau khi đã thêm phần tử mới.
-*/
-
-
 #include <iostream>
 using namespace std;
 
@@ -122,5 +110,3 @@ int main()
     TimKiemVaThem(L, k);
     return 0;
 }
-
-

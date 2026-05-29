@@ -1,8 +1,3 @@
-/*Nhận vào một dãy gồm N số nguyên, hãy hình thành cây NPTK bằng cách thêm
-các số này một cách tuyến tính và viết hàm kiểm tra xem 2 nút bất kỳ có quan hệ cha con
-không. 
-*/
-
 #include <iostream>
 #include <vector>
 #include <stack>

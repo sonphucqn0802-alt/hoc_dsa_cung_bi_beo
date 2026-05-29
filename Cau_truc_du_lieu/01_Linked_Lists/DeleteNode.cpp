@@ -1,11 +1,3 @@
-/*Hãy viết chương trình thực hiện các tác vụ sau theo từng bước:
-
-Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết
-TÌM vị trí xuất hiện đầu tiên của phần tử K trong danh sách liên kết và XÓA đi phần tử đó nếu có.
-Nếu K không tồn tại trong danh sách thì in ra -1. Ngược lại, in ra danh sách sau khi đã xóa.*/
-
-
-
 #include <iostream>
 using namespace std;
 

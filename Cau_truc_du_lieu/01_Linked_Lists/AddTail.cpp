@@ -1,9 +1,3 @@
-/*Hãy viết chương trình thực hiện các tác vụ sau:
-
-Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. Phần tử mới được THÊM vào CUỐI danh sách liên kết
-In ra toàn bộ danh sách liên kết*/
-
-
 #include <iostream>
 using namespace std;
 
