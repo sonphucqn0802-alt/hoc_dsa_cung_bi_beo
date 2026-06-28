@@ -19,15 +19,52 @@ Kết quả: Đưa ra thiết bị xuất chuẩn một số nguyên – số ng
 
 
 #include <iostream>
-#include <vector>  
+
 using namespace std;
 
-int main(){
-
-    int a, b, k, m, n;
-    cin >> a >> b >> k >> m >> n;
-
-    vector <long long> A(n,1);
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     
+    long long a, k, b, m, n;
+    cin >> a >> k >> b >> m >> n;
 
+    long long left = 1, right = n / min(a, b) + 1;
+    long long ans = right;
+
+    while (left <= right) {
+        long long mid = left + (right - left) / 2;
+
+        long long days_a = mid - mid / k;
+        long long days_b = mid - mid / m;
+
+        // 1. Kiểm tra xem riêng Đội I có chặt xong không
+        // (n + a - 1) / a là công thức làm tròn lên của n / a
+        if (days_a >= (n + a - 1) / a) {
+            ans = mid;
+            right = mid - 1;
+            continue;
+        }
+
+        // 2. Kiểm tra xem riêng Đội II có chặt xong không
+        if (days_b >= (n + b - 1) / b) {
+            ans = mid;
+            right = mid - 1;
+            continue;
+        }
+
+
+        long long cut_a = (mid - mid / k) * a;
+        long long cut_b = (mid - mid / m) * b;
+
+        if (cut_a + cut_b >= n) {
+            ans = mid;
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
 }
