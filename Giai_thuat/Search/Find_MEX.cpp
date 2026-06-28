@@ -24,27 +24,25 @@ Một số nguyên là giá trị MEX của dãy được cho.*/
 using namespace std;
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int n;
     cin >> n;
-    vector<int> a(n);
+
+    vector<int> a(n,0);
     for (int i = 0; i < n; i++) {
-        cin >> a[i];
+         int x;
+         cin >> x;
+         if (x>=0 && x<=n){
+            a[x]=1;
+         }
     }
     
     
     int mex = 0;
-    while (true) {
-        bool found = false;
-        for (int i = 0; i < n; i++) {
-            if (a[i] == mex) {
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            break;
-        }
-        mex++;
+    while (mex < n && a[mex] == 1){
+        mex ++;
     }
     
     cout << mex << endl;
