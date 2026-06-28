@@ -1,3 +1,53 @@
+/*Cho một dãy số nguyên a gồm N phần tử 
+a
+1
+,
+a
+2
+,
+…
+,
+a
+N
+.
+
+Có Q truy vấn, mỗi truy vấn cho một số nguyên x. Bạn hãy trả lời xem số nguyên x này có trong dãy a hay không?
+
+Lưu ý: Trong template đã đảm bảo mảng ban đầu sau khi nhập vào sẽ được sắp xếp, các bạn chỉ cần hoàn thành hàm myBinarySearch.
+
+Input:
+ - Dòng đầu tiên là 2 số nguyên dương N, Q 
+(
+1
+≤
+N
+,
+Q
+≤
+10
+5
+)
+
+ - Dòng tiếp theo chứa N số nguyên 
+a
+i
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+)
+ là các phần tử của mảng.
+
+- Q dòng tiếp theo, mỗi dòng chứa một số x là câu hỏi của truy vấn.
+
+Output:
+Gồm Q dòng, mỗi dòng gồm một câu trả lời. Nếu x trong dãy a thì in ra ‘YES'. Ngược lại, in ra ‘NO'.*/
 #include <iostream>
 #include <algorithm>
 using namespace std;

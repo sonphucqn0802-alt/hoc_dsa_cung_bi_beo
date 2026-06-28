@@ -1,3 +1,20 @@
+/*[share chung] Binary Search #2
+Thuật toán tìm kiếm nhị phân là một thuật toán tìm kiếm đơn giản nhưng có tốc độ tìm kiếm cực kỳ nhanh. Tuy nhiên, đa phần các hướng dẫn và khóa học trên mạng đều hướng dẫn người học cài đặt trên mảng số nguyên trong khi trong thực tế chỉ cần mảng có thể sắp xếp được thì ra có thể áp dụng thuật toán tìm kiếm nhị phân.
+
+Hãy cài đặt thuật toán tìm kiếm nhị phân trên mảng chuỗi có N phần tử.
+
+Input:
+Dòng đầu tiên là số nguyên N dương (0 < N < 2000)
+
+N dòng tiếp theo chứa các phần tử Ai trong mảng, mỗi phần tử là một chuỗi với độ dài không quá 10. Các phần tử này đã được sắp xếp theo thứ tự bảng chữ cái
+
+Dòng cuối cùng là chuỗi x cần tìm
+
+Output:
+Dòng đầu tiên là vị trí của x được tìm thấy trong mảng. Nếu không tìm thấy thì xuất ra -1
+
+Dòng tiếp theo là số lần duyệt qua các phần tử để tìm được x. Nếu không tìm thấy thì không cần xuất ra dòng này*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
