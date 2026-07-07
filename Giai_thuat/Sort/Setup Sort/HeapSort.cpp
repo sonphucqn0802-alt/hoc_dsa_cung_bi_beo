@@ -28,6 +28,9 @@ void heapify(vector<int>& a, int n, int i) {
 }
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int n;
     if (!(cin >> n)) return 0;
     vector<int> a(n);
@@ -37,6 +40,8 @@ int main() {
     for (int i = 0; i < n; ++i) cout << a[i] << (i == n - 1 ? "" : " ");
     cout << "\n\nSap xep:" << endl;
 
+
+    // Build min heap
     for (int i = n / 2 - 1; i >= 0; i--) {
         heapify(a, n, i);
     }
@@ -52,7 +57,7 @@ int main() {
         cout << "\nMang sau khi heapify voi n = " << i << ": ";
         printArray(a, i, n);
     }
-
+// 
     cout << "Mang sau khi sap xep:" << endl;
     for (int i = 0; i < n; ++i) cout << a[i] << (i == n - 1 ? "" : " ");
 

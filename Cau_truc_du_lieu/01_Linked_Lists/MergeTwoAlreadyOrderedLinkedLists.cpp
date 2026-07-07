@@ -1,3 +1,9 @@
+
+/*Hãy viết chương trình thực hiện các tác vụ sau:
+
+Tạo hai danh sách liên kết đơn đã sắp xếp để lưu trữ N và M số nguyên. 
+Nối hai danh sách liên kết đơn đã sắp xếp thành một danh sách liên kết đơn đã sắp xếp*/ 
+
 #include <bits/stdc++.h>
 using namespace std;
 

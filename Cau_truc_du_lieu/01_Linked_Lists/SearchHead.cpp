@@ -1,3 +1,8 @@
+/*Hãy viết chương trình thực hiện các tác vụ sau:
+
+Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. 
+Tìm và in ra vị trí đầu tiên của phần tử có giá trị X trong danh sách liên kết*/ 
+
 #include <iostream>
 using namespace std;
 

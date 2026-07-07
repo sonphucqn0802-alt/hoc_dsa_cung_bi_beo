@@ -1,3 +1,8 @@
+/*Hãy viết chương trình thực hiện các tác vụ sau:
+
+Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. 
+Sắp xếp danh sách liên kết đơn theo thứ tự tăng dần*/ 
+
 #include <iostream>
 using namespace std;
 

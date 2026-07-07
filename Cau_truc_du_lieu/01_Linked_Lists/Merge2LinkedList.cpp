@@ -1,3 +1,8 @@
+/*Hãy viết chương trình thực hiện các tác vụ sau:
+
+Tạo hai danh sách liên kết đơn để lưu trữ N và M số nguyên. 
+Nối hai danh sách liên kết đơn thành một danh sách liên kết đơn*/ 
+
 #include <iostream>
 using namespace std;
 

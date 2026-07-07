@@ -1,3 +1,8 @@
+/*Hãy viết chương trình thực hiện các tác vụ sau:
+
+Tạo một danh sách liên kết đơn để lưu trữ N số nguyên. Phần tử mới được THÊM vào ĐẦU danh sách liên kết
+In ra toàn bộ danh sách liên kết*/ 
+
 #include <iostream>
 using namespace std;
 
@@ -30,9 +35,6 @@ void InsertHead (LIST &L, NODE *p) {
 
 NODE* CreateNode(int x) {
      NODE*p = new NODE;
-     if (p==NULL) {
-          exit(1);
-     }
      p->info = x;
      p->pNext = NULL;
      return p; 
