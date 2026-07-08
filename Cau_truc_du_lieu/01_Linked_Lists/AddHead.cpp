@@ -44,7 +44,7 @@ NODE* CreateNode(int x) {
 void PrintList(LIST L)
 {
     NODE *p = L.pHead;
-    while (p != NULL)
+    while (p != NULL )
     {
         cout << p->info << " ";
         p = p->pNext;
