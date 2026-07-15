@@ -1,4 +1,6 @@
-/*Cho một tập N điểm (x,y) trên mặt phẳng Oxy. Bạn hãy sắp xếp và in ra các điểm tăng dần theo x, nếu x bằng nhau thì sắp xếp các điểm giảm dần theo y.*/
+/*Cho một tập N điểm (x,y) trên mặt phẳng Oxy. 
+Bạn hãy sắp xếp và in ra các điểm tăng dần theo x, 
+nếu x bằng nhau thì sắp xếp các điểm giảm dần theo y.*/
 
 
 #include <iostream>
