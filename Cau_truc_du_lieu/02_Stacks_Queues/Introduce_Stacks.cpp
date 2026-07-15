@@ -29,9 +29,6 @@ int main() {
     int n;
 
     while (cin >> n) {
-        if (n<-1 || n>6){
-            continue;
-        }
         switch (n) {
             case 1:
                 {
